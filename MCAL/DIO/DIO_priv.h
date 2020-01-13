@@ -1,9 +1,9 @@
-/*******************************/
-/* Author      : Ahmed Alaa    */
-/* Description : DIO privat functions */
-/* Date        : 22 NOV 19     */
-/* Version     : 1.0V          */
-/*******************************/
+/**
+ ** Author      : Ahmed El-Aref    
+ ** Description : DIO Private File
+ ** Date        : 22 NOV 19     
+ ** Version     : 1.0V          
+ **/
 
 #ifndef DIO_PRIV_H
 #define DIO_PRIV_H
