@@ -1,9 +1,9 @@
-/*******************************/
-/* Author      : Ahmed Alaa    */
-/* Description : DIO interface */
-/* Date        : 22 NOV 19     */
-/* Version     : 1.0V          */
-/*******************************/
+/**
+ ** Author      : Ahmed El-Aref    
+ ** Description : DIO Interface File
+ ** Date        : 22 NOV 19     
+ ** Version     : 1.0V          
+ **/
 
 #ifndef DIO_INT_H
 #define DIO_INT_H
@@ -67,19 +67,19 @@ void DIO_voidInit(void);
 
 /************************************************/
 /** !comment : function to set pin as high (5V) */
-/**            or low (0V) 					    */
+/**            or low (0V) 					                */
 /************************************************/
 tenuErrorStatus DIO_enuSetPinValue(u8 u8PinNbCpy, u8 u8PinValueCpy);
 
 /************************************************/
 /** !comment : function to get pin valuue       */
-/**            as high (5V)or low (0V) 		    */
+/**            as high (5V)or low (0V) 		       */
 /************************************************/
 tenuErrorStatus DIO_enuGetPinValue(u8 u8PinNbCpy, u8* pu8PinValueCpy);
 
 /************************************************/
 /** !comment : function to set internal pull up */
-/**            resistor for input pins 		    */
+/**            resistor for input pins 		       */
 /************************************************/
 tenuErrorStatus DIO_enuSetPullUp(u8 u8PinNbCpy, u8 u8pullUpStatusCpy);
 
