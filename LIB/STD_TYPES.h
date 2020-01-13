@@ -1,9 +1,9 @@
-/************************************/
-/** Author      : Ahmed EL-Aref  	*/
-/** Description : Standard Library  */
-/** Date        : 7 DEC 19    	    */
-/** Version     : 1.0V        	    */
-/************************************/
+/**
+ ** Author      : Ahmed EL-Aref  
+ ** Description : Standard Library 
+ ** Date        : 7 DEC 19    	   
+ ** Version     : 1.0V        	   
+ **/
 
 #ifndef   STD_TYPES_H 
 #define   STD_TYPES_H
