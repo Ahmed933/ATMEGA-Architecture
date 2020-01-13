@@ -1,9 +1,9 @@
-/********************************/
-/** Author      : Ahmed Alaa    */
-/** Description : DIO interface */
-/** Date        : 22 NOV 19     */
-/** Version     : 1.0V          */
-/********************************/
+/**
+ ** Author      : Ahmed El-Aref   
+ ** Description : DIO Program For Functions' Implementation
+ ** Date        : 22 NOV 19     
+ ** Version     : 1.0V          
+ **/
 
 #include "STD_Types.h"
 #include "Bit_math.h"
@@ -19,10 +19,10 @@
 /************************************************/
 void DIO_voidInit(void)
 {
-	DDRA = conc(u8PINDIR_7, u8PINDIR_6, u8PINDIR_5, u8PINDIR_4, u8PINDIR_3, u8PINDIR_2, u8PINDIR_1, u8PINDIR_0);
-	DDRB = conc(u8PINDIR_15, u8PINDIR_14, u8PINDIR_13, u8PINDIR_12, u8PINDIR_11, u8PINDIR_10, u8PINDIR_9, u8PINDIR_8);
-	DDRC = conc(u8PINDIR_23, u8PINDIR_22, u8PINDIR_21, u8PINDIR_20, u8PINDIR_19, u8PINDIR_18, u8PINDIR_17, u8PINDIR_16);
-	DDRD = conc(u8PINDIR_31, u8PINDIR_30, u8PINDIR_29, u8PINDIR_28, u8PINDIR_27, u8PINDIR_26, u8PINDIR_25, u8PINDIR_24);
+	DDRA = conc(PORTA_B7, PORTA_B6, PORTA_B5, PORTA_B4, PORTA_B3, PORTA_B2, PORTA_B1, PORTA_B0);
+	DDRB = conc(PORTB_B7, PORTB_B6, PORTB_B5, PORTB_B4, PORTB_B3, PORTB_B2, PORTB_B1, PORTB_B0);
+	DDRC = conc(PORTC_B7, PORTC_B6, PORTC_B5, PORTC_B4, PORTC_B3, PORTC_B2, PORTC_B1, PORTC_B0);
+	DDRD = conc(PORTD_B7, PORTD_B6, PORTD_B5, PORTD_B4, PORTD_B3, PORTD_B2, PORTD_B1, PORTD_B0);
 }
 
 /************************************************/
