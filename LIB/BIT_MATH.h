@@ -1,9 +1,9 @@
 /********************************************/
-/** Author      : Ahmed El-Aref 			*/
-/** Description : Bit Math Library   	    */
-/**				  for bit field operations	*/
-/** Date        : 1 nov 19  		    	*/
-/** Version     : 1.0V                   	*/
+/** Author      : Ahmed El-Aref 			      */
+/** Description : Bit Math Library   	      */
+/**				        for bit field operations	*/
+/** Date        : 1 nov 19  		    	      */
+/** Version     : 1.0V                     	*/
 /********************************************/
 
 #ifndef   BIT_MATH_H 
