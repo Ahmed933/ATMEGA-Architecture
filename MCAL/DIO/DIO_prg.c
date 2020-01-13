@@ -32,7 +32,7 @@ void DIO_voidInit(void)
 tenuErrorStatus DIO_enuSetPinValue(u8 u8PinNbCpy, u8 u8PinValueCpy)
 {
 	tenuErrorStatus rnuReturnLoc = OK;
-	if(uPinNbCpy <= PORTA_B7)
+	if(u8PinNbCpy <= PORTA_B7)
 	{
 		if(u8PinValueCpy == DIO_u8HIGH)
 		{
@@ -41,7 +41,7 @@ tenuErrorStatus DIO_enuSetPinValue(u8 u8PinNbCpy, u8 u8PinValueCpy)
 		{
 			CLR_BIT(PORTA,u8PinNbCpy);
 		}
-	}else if(u8PinNbCpy>= PORTB_B0 && uPinNbCpy <= PORTB_B7)
+	}else if(u8PinNbCpy>= PORTB_B0 && u8PinNbCpy <= PORTB_B7)
 	{
 		u8PinNbCpy = u8PinNbCpy % PORTB_B0;
 		if(u8PinValueCpy == DIO_u8HIGH)
@@ -51,7 +51,7 @@ tenuErrorStatus DIO_enuSetPinValue(u8 u8PinNbCpy, u8 u8PinValueCpy)
 		{
 			CLR_BIT(PORTB,u8PinNbCpy);
 		}
-	}else if(u8PinNbCpy>= PORTC_B0 && uPinNbCpy <= PORTC_B7)
+	}else if(u8PinNbCpy>= PORTC_B0 && u8PinNbCpy <= PORTC_B7)
 	{
 		u8PinNbCpy = u8PinNbCpy % PORTB_B0;
 		if(u8PinValueCpy == DIO_u8HIGH)
@@ -61,7 +61,7 @@ tenuErrorStatus DIO_enuSetPinValue(u8 u8PinNbCpy, u8 u8PinValueCpy)
 		{
 			CLR_BIT(PORTC,u8PinNbCpy);
 		}
-	}else if(u8PinNbCpy>= PORTD_B0 && uPinNbCpy <= PORTD_B7)
+	}else if(u8PinNbCpy>= PORTD_B0 && u8PinNbCpy <= PORTD_B7)
 	{
 		u8PinNbCpy = u8PinNbCpy % PORTB_B0;
 		if(u8PinValueCpy == DIO_u8HIGH)
@@ -87,21 +87,21 @@ tenuErrorStatus DIO_enuSetPinValue(u8 u8PinNbCpy, u8 u8PinValueCpy)
 tenuErrorStatus DIO_enuGetPinValue(u8 u8PinNbCpy, u8* pu8PinValueCpy)
 {
 	tenuErrorStatus rnuReturnLoc = OK;
-	if(uPinNbCpy <= PORTA_B7)
+	if(u8PinNbCpy <= PORTA_B7)
 	{
 		*pu8PinValueCpy = GET_BIT(PINA, u8PinNbCpy);
 		
-	}else if(u8PinNbCpy>= PORTB_B0 && uPinNbCpy <= PORTB_B7)
+	}else if(u8PinNbCpy>= PORTB_B0 && u8PinNbCpy <= PORTB_B7)
 	{
 		u8PinNbCpy = u8PinNbCpy % PORTB_B0;
 		*pu8PinValueCpy = GET_BIT(PINB, u8PinNbCpy);
 		
-	}else if(u8PinNbCpy>= PORTC_B0 && uPinNbCpy <= PORTC_B7)
+	}else if(u8PinNbCpy>= PORTC_B0 && u8PinNbCpy <= PORTC_B7)
 	{
 		u8PinNbCpy = u8PinNbCpy % PORTB_B0;
 		*pu8PinValueCpy = GET_BIT(PINC, u8PinNbCpy);
 		
-	}else if(u8PinNbCpy>= PORTD_B0 && uPinNbCpy <= PORTD_B7)
+	}else if(u8PinNbCpy>= PORTD_B0 && u8PinNbCpy <= PORTD_B7)
 	{
 		u8PinNbCpy = u8PinNbCpy % PORTB_B0;
 		*pu8PinValueCpy = GET_BIT(PIND, u8PinNbCpy);
@@ -124,14 +124,14 @@ tenuErrorStatus DIO_enuSetPullUp(u8 u8PinNbCpy, u8 u8pullUpStatusCpy)
 	tenuErrorStatus rnuReturnLoc = OK;
 	u8 u8PinDir;
 	
-	if(uPinNbCpy <= PORTA_B7)
+	if(u8PinNbCpy <= PORTA_B7)
 	{
 		u8PinDir = GET_BIT(DDRA, u8PinNbCpy);
 		if(u8PinDir == INPUT)
 		{
 			SET_BIT(PORTA,u8PinNbCpy);
 		}
-	}else if(u8PinNbCpy>= PORTB_B0 && uPinNbCpy <= PORTB_B7)
+	}else if(u8PinNbCpy>= PORTB_B0 && u8PinNbCpy <= PORTB_B7)
 	{
 		u8PinNbCpy = u8PinNbCpy % PORTB_B0;
 		u8PinDir = GET_BIT(DDRB, u8PinNbCpy);
@@ -139,7 +139,7 @@ tenuErrorStatus DIO_enuSetPullUp(u8 u8PinNbCpy, u8 u8pullUpStatusCpy)
 		{
 			SET_BIT(PORTB,u8PinNbCpy);
 		}
-	}else if(u8PinNbCpy>= PORTC_B0 && uPinNbCpy <= PORTC_B7)
+	}else if(u8PinNbCpy>= PORTC_B0 && u8PinNbCpy <= PORTC_B7)
 	{
 		u8PinNbCpy = u8PinNbCpy % PORTB_B0;
 		u8PinDir = GET_BIT(DDRC, u8PinNbCpy);
@@ -147,7 +147,7 @@ tenuErrorStatus DIO_enuSetPullUp(u8 u8PinNbCpy, u8 u8pullUpStatusCpy)
 		{
 			SET_BIT(PORTC,u8PinNbCpy);
 		}
-	}else if(u8PinNbCpy>= PORTD_B0 && uPinNbCpy <= PORTD_B7)
+	}else if(u8PinNbCpy>= PORTD_B0 && u8PinNbCpy <= PORTD_B7)
 	{
 		u8PinNbCpy = u8PinNbCpy % PORTB_B0;
 		u8PinDir = GET_BIT(DDRD, u8PinNbCpy);
